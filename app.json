@@ -2,11 +2,7 @@
   "expo": {
     "name": "HereHere2",
     "slug": "HereHere2",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,11 +14,17 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.loopify.herehere",
+      "buildNumber": "1.0.0",
+      "infoPlist": {
+        "UIBackgroundModes": ["location", "fetch"],
+        "NSLocationWhenInUseUsageDescription": "Allow HereHere to use your location",
+        "NSLocationAlwaysUsageDescription": "Allow HereHere to use your location in the background for GeoFencing",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Allow HereHere to use your location in the background for GeoFencing"
+      }
     }
   }
 }
